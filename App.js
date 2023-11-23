@@ -1,20 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { View } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import HomeScreen from './src/screens/HomeScreen';
+import CalendarioScreen from './src/screens/CalendarioScreen.js';
+import AgendamentoScreen from './src/screens/AgendamentoScreen.js';
+import ExcluirAgendamentoScreen from './src/screens/ExcluirAgendamentoScreen.js';
 
-export default function App() {
+const Stack = createStackNavigator();
+
+const AppNavigator = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="Agenda"
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#3498db', // Defina a cor de fundo do cabeçalho
+          },
+          
+        }}
+      >
+        <Stack.Screen name="Agenda" component={HomeScreen} />
+        <Stack.Screen name="Calendario" component={CalendarioScreen} />
+        <Stack.Screen name="Agendamento" component={AgendamentoScreen} />
+        <Stack.Screen name="ExcluirAgendamento" component={ExcluirAgendamentoScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default AppNavigator;
