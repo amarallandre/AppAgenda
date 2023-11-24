@@ -24,7 +24,7 @@ const AppNavigator = () => {
         <Stack.Screen name="Agenda" component={HomeScreen} />
         <Stack.Screen name="Calendario" component={CalendarioScreen} />
         <Stack.Screen name="Agendamento" component={AgendamentoScreen} />
-        <Stack.Screen name="ExcluirAgendamento" component={ExcluirAgendamentoScreen} />
+        <Stack.Screen name="Excluir Agendamentos" component={ExcluirAgendamentoScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

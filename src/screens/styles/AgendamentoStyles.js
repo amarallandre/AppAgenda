@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
   input: {
     backgroundColor: '#3498db', // Cor de fundo do botão
-    padding: 50,
+    padding: 30,
     marginTop: 100,
     marginHorizontal: 20,
     alignItems: 'center',
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
 
   },
   buttonContainer: {
-    gap: 50,
+    gap: 100,
     marginTop: 50,
     marginHorizontal: 20,
   },

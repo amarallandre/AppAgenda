@@ -16,7 +16,7 @@ const HomeScreen = () => {
   };
 
   const handleExcluirAgendamentoPress = () => {
-    navigation.navigate('ExcluirAgendamento');
+    navigation.navigate('Excluir Agendamentos');
   };
 
   return (
