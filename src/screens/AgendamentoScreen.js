@@ -43,6 +43,12 @@ const AgendamentoScreen = () => {
       // Atualizar o estado com a nova lista de agendamentos
       setAgendamentos(novosAgendamentos);
 
+      setNome('');
+      setData('');
+      setHora('');
+
+
+
       console.log('Agendamento salvo localmente!');
     } catch (error) {
       console.error('Erro ao salvar agendamento:', error);
